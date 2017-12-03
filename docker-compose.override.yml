@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  gh-server:
+    build: .
+    environment:
+      HOME_IP: 192.168.2.102
+      HOME_PORT: 8009
+      DEVICE_NAME: Google-Home-0b6316856867e487ab9256a5d6cfaefc
+    tmpfs:
+      - /tmp
+    volumes:
+      - .:/workspace/googlehome
+    ports:
+      - "${HOME_PORT:-8009}:8009"
+    volumes:
+      - .:/workspace/googlehome
+    command:
+      - start
+    #links:
+    #  - server
+

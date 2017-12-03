@@ -1,0 +1,22 @@
+version: "3.3"
+
+#volumes:
+#  db: {}
+
+services:
+  gh-server:
+    image: hirokiy/google-home-notifier:${IMAGE_TAG:-latest}
+    #read_only: true
+    environment:
+      HOME_IP: 192.168.2.102
+      HOME_PORT: 8009
+      DEVICE_NAME: Google-Home-0b6316856867e487ab9256a5d6cfaefc
+    tmpfs:
+      - /tmp
+    ports:
+      - "${HOME_PORT:-8009}:8009"
+    #links:
+    #  - server
+    volumes:
+      - /workspace/googlehome/node_modules
+

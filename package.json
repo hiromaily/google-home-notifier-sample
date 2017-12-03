@@ -1,0 +1,24 @@
+{
+  "name": "google-home-notifier-sample",
+  "version": "1.0.0",
+  "description": "sample for google-home notifier",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node main.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiromaily/google-home-notifier-sample.git"
+  },
+  "author": "Hiroki Yasui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiromaily/google-home-notifier-sample/issues"
+  },
+  "homepage": "https://github.com/hiromaily/google-home-notifier-sample#readme",
+  "dependencies": {
+    "google-home-notifier": "^1.2.0"
+  }
+}
