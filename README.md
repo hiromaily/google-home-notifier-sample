@@ -5,12 +5,6 @@ For now, other devices like Google Home is not detected from Docker environment 
 So please run on local machine.
 To expose local environment, [ngrok](https://ngrok.com/) is used.
 
-```
-$ make server
-
-# This can send text to Google Home and it speaks.
-$ curl -X POST -d "text=Hello Google Home" https://xxxxx.ngrok.io/google-home-notifier
-```
 
 ## settings for voice control by Slack
 #### 1. prepare Google Apps Script as middle server
@@ -36,3 +30,34 @@ $ curl -X POST -d "text=Hello Google Home" https://xxxxx.ngrok.io/google-home-no
 
 #### 3. How this works
 ![Slack Image](https://raw.githubusercontent.com/hiromaily/google-home-notifier-sample/master/images/slackimage.png "slack image")
+
+
+## run server
+```
+$ make server
+
+# This can send text to Google Home and it speaks.
+$ curl -X POST -d "text=Hello Google Home" https://xxxxx.ngrok.io/google-home-notifier
+```
+
+
+## settings on Raspberry Pi 3
+First of all, latest node.js and nmp are required. And system time settings is important to avoid error when installing.
+
+```
+# Install latest node.js and npm
+$ sudo apt-get update
+$ sudo apt-get install -y nodejs npm
+$ sudo npm cache clean
+$ sudo npm install npm n -g
+$ sudo n stable
+```
+
+```
+$ apt-get install libavahi-compat-libdnssd-dev
+```
+
+```
+# settings system time
+$ sudo date -s "01/04/2018 20:11"
+```
