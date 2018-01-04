@@ -7,8 +7,7 @@ function doPost(e) {
     }
     var text = e.parameter.text.replace(/<@[a-zA-Z0-9].*?>/, '').slice(0, 50);
     var user_name = e.parameter.user_name;
-    //text = user_name + 'ひろきの発言 ' + text;
-    text = 'ひろきの発言。' + text;
+
     return request(text);
 }
 

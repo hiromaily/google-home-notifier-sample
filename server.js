@@ -8,10 +8,10 @@ var app = express();
 const serverPort = 8888 // default port
 
 var deviceName = 'Google-Home';
-var ip = '192.168.2.102'; // default IP
+var ip = '10.0.0.132'; // default IP of Google Home
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-var language = 'ja'; // default language code
+var language = 'en'; // default language code: en ja //TODO: it should be changed by parameter
 
 //-----------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ app.post('/google-home-notifier', urlencodedParser, function (req, res) {
 
 
 //-----------------------------------------------------------------------------
-// GET
+// GET //TODO:for not, it's not used.
 //-----------------------------------------------------------------------------
 app.get('/google-home-notifier', function (req, res) {
 
