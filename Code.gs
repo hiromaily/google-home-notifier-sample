@@ -1,6 +1,6 @@
 //For Slack
 function doPost(e) {
-    var token = "sq6buCK0iB9iHYFQrHFt3SZ1";
+    var token = "token";
 
     if (token != e.parameter.token) {
         return;
