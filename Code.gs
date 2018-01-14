@@ -20,7 +20,7 @@ function doGet(e) {
 }
 
 function request(text) {
-    var url = 'https://b47fd2f1.ngrok.io/google-home-notifier';
+    var url = 'https://xxxxx.ngrok.io/google-home-notifier';
     var urlFetchOption = {
         'method' : 'post',
         'contentType' : 'application/x-www-form-urlencoded',
